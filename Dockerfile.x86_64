@@ -1,0 +1,35 @@
+FROM ubuntu:14.04
+
+RUN apt-get update && apt-get install -y ssh \
+sudo \
+vim \
+cmake \
+libeigen3-dev \
+zlib1g-dev \
+libssl-dev \
+python-dev \
+python-setuptools \
+libconsole-bridge-dev \
+libbz2-dev \
+liblz4-dev \
+libyaml-cpp-dev \
+libgtest-dev \
+libgoogle-glog-dev \
+libpoco-dev \
+libopencv-dev \
+libproj-dev \
+libpcap-dev \
+node \
+libboost-all-dev \
+python-yaml \
+software-properties-common \
+git \
+libglew-dev \
+gdb
+
+
+RUN add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/for-ros
+RUN apt-get update && apt-get install -y libpcl-* \
+tcl-vtk \
+python-vtk \
+libvtk-java
